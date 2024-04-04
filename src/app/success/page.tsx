@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
@@ -39,7 +38,7 @@ export default () => {
         </p>
         <Link
           href="/"
-          className="w-full h-12 py-3 text-center text-white bg-dark-slate-grey rounded-[5px] border-none"
+          className="w-full h-12 py-3 text-center text-white bg-dark-slate-grey rounded-[5px] border-none hover:bg-tomato"
         >
           Dismiss message
         </Link>

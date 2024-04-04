@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -22,24 +21,75 @@ export default function Home() {
           <h1 className=" text-[3rem] text-dark-slate-grey font-bold my-[1.5rem] mx-0">
             Stay updated!
           </h1>
-          <p className="text-[0.85rem]">
+          <p className="text-[0.85rem] my-3">
             Join 60,000+ product managers receiving monthly updates on:
           </p>
-          <ul className="p-0">
-            <li className="bg-[url('/assets/images/icon-list.svg')] bg-no-repeat py-[0.5rem] px-[2rem] text-[0.8rem]">
-              Product discovery and building what matters
+          <ul className="p-0 flex flex-col mt-4">
+            <li className="flex mb-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+              >
+                <g fill="none">
+                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                  <path
+                    stroke="#FFF"
+                    strokeWidth="2"
+                    d="M6 11.381 8.735 14 15 8"
+                  />
+                </g>
+              </svg>
+              <p className="text-[0.8rem] mx-[1rem] my-auto">
+                Product discovery and building what matters
+              </p>
             </li>
-            <li className="bg-[url('/assets/images/icon-list.svg')] bg-no-repeat py-[0.5rem] px-[2rem] text-[0.8rem]">
-              Measuring to ensure updates are a success
+            <li className="flex mb-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+              >
+                <g fill="none">
+                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                  <path
+                    stroke="#FFF"
+                    strokeWidth="2"
+                    d="M6 11.381 8.735 14 15 8"
+                  />
+                </g>
+              </svg>
+              <p className="text-[0.8rem] mx-[1rem] my-auto">
+                Measuring to ensure updates are a success
+              </p>
             </li>
-            <li className="bg-[url('/assets/images/icon-list.svg')] bg-no-repeat py-[0.5rem] px-[2rem] text-[0.8rem]">
-              And much more!
+            <li className="flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+              >
+                <g fill="none">
+                  <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
+                  <path
+                    stroke="#FFF"
+                    strokeWidth="2"
+                    d="M6 11.381 8.735 14 15 8"
+                  />
+                </g>
+              </svg>
+              <p className="text-[0.8rem] mx-[1rem] my-auto">And much more!</p>
             </li>
           </ul>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email address</label>
+          <form className="mt-[3rem]" onSubmit={handleSubmit}>
+            <label className="text-xs font-semibold" htmlFor="email">
+              Email address
+            </label>
             <input
-              className="w-full border rounded pl-[1rem] h-[3rem]"
+              className="w-full border rounded pl-[1rem] h-[3rem] cursor-pointer"
               type="email"
               name="email"
               id="email"
@@ -47,7 +97,7 @@ export default function Home() {
               placeholder="email@company.com"
               onChange={handleChange}
             />
-            <button className="bg-dark-slate-grey text-white w-full h-[3rem]">
+            <button className="bg-dark-slate-grey text-white w-full h-[3rem] mt-5 rounded hover:bg-tomato">
               Subscribe to monthly newsletter
             </button>
           </form>
