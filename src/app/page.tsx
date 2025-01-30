@@ -11,7 +11,13 @@ export default function Home() {
   const handleSubmit = (e: any) => {
     e.preventDefault();
 
-    console.log("[v]:email \n..\t", email);
+    // form.classList.add("validated");
+    // if (!form.checkValidity()) {
+    //   form.querySelectorAll(":invalid")[0].focus();
+    //   return;
+    // }
+
+    // console.log("[v]:email \n..\t", email);
     router.push(`/success?email=${email}`);
   };
   return (
@@ -84,18 +90,23 @@ export default function Home() {
               <p className="text-[0.8rem] mx-[1rem] my-auto">And much more!</p>
             </li>
           </ul>
-          <form className="mt-[3rem]" onSubmit={handleSubmit}>
-            <label className="text-xs font-semibold" htmlFor="email">
+          <form className="mt-[3rem]" onSubmit={handleSubmit} noValidate>
+            <label className="text-xs font-semibold flex" htmlFor="email">
               Email address
+              <span className="ml-auto hidden [.validated_&]:peer-invalid:block text-tomato">
+                Valid email required
+              </span>
             </label>
             <input
-              className="w-full border rounded pl-[1rem] h-[3rem] cursor-pointer"
+              className="peer w-full border rounded pl-[1rem] h-[3rem] cursor-pointer [.validated_&]:invalid:[&:not(:placeholder-shown):not(:focus)]:border-tomato"
               type="email"
               name="email"
               id="email"
               value={`${email}`}
               placeholder="email@company.com"
               onChange={handleChange}
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             />
             <button className="bg-dark-slate-grey text-white w-full h-[3rem] mt-5 rounded hover:bg-tomato">
               Subscribe to monthly newsletter
