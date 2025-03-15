@@ -16,6 +16,9 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
+        illustration: "url('/assets/images/illustration-sign-up-desktop.svg')",
+        "illustration-mobile":
+          "url('/assets/images/illustration-sign-up-mobile.svg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
