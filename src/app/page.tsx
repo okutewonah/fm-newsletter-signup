@@ -9,7 +9,7 @@ const schema = z.object({
   email: z.string().email({ message: "Valid email required" }),
 });
 
-export default function Home() {
+export default () => {
   const [email, setEmail] = useState<String>("");
   const router = useRouter();
   const handleChange = (e: any) => {
@@ -146,4 +146,4 @@ export default function Home() {
       </main>
     </body>
   );
-}
+};
