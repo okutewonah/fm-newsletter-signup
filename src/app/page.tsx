@@ -127,7 +127,7 @@ export default function Home() {
                 </label>
                 <input
                   {...register("email")}
-                  className="h-12 w-full border border-grey rounded-lg my-3 pl-3"
+                  className="h-12 w-full bg-white border border-grey rounded-lg my-3 pl-3 focus:ring-1 focus:invalid:border-tomato focus:invalid:bg-tomato focus:invalid:bg-opacity-35 focus:invalid:ring-tomato focus:invalid:text-tomato"
                   type="email"
                   name="email"
                   id="email"
@@ -135,7 +135,7 @@ export default function Home() {
                   required
                   onChange={handleChange}
                 />
-                <button className="h-12 bg-charcoal-grey text-white rounded-lg">
+                <button className="h-12 bg-charcoal-grey text-white rounded-lg hover:bg-tomato">
                   Subscribe to monthly newsletter
                 </button>
               </form>
