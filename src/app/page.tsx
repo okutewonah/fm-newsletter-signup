@@ -36,7 +36,7 @@ export default () => {
             </div>
             <div className="my-3">
               <div className="flex">
-                <div class="mt-1">
+                <div className="mt-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
