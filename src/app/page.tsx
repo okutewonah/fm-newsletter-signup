@@ -123,7 +123,7 @@ export default () => {
                   Email address
                   {errors.email?.message && (
                     <span className="ml-auto text-tomato">
-                      {errors.email?.message}
+                      {Boolean(errors.email?.message)}
                     </span>
                   )}
                 </label>
