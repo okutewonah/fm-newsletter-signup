@@ -53,8 +53,10 @@ export default () => {
                     </g>
                   </svg>
                 </div>
-                <div class="ml-3">
-                  <p class="">Product discovery and building what matters</p>
+                <div className="ml-3">
+                  <p className="">
+                    Product discovery and building what matters
+                  </p>
                 </div>
               </div>
               <div className="flex">
